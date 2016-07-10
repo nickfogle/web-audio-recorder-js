@@ -2,16 +2,12 @@
 
 ## What is it?
 
-WebAudioRecorder.js is a JavaScript library that records audio input (Web Audio API AudioNode object) and encodes to audio file image (Blob object). It supports three encoding formats.
+WebAudioRecorder.js is a JavaScript library that records audio input (Web Audio API AudioNode object) and encodes to audio file image (Blob object). It supports:
 
-* Waveform Audio (.wav)
-* Ogg Vorbis (.ogg)
 * MP3 (MPEG-1 Audio Layer III) (.mp3)
 
 > This library uses following encoder libraries as lower layer.
 > 
-> * WavAudioEncoder.js: <https://github.com/higuma/wav-audio-encoder-js>
-> * OggVorbisEncoder.js: <https://github.com/higuma/ogg-vorbis-encoder-js>
 > * Mp3LameEncoder.js: <https://github.com/higuma/mp3-lame-encoder-js>
 
 ## Demo
@@ -24,25 +20,12 @@ Microphone recorder demo.
 
 Library consists of one main script and several worker scripts.
 
-`lib/` contains uncompressed library files.
+`src/` contains library files.
 
-* `WebAudioRecorder.js`: main script
-* `WebAudioRecorderWav.js`: worker for Waveform Audio encoder
-* `WebAudioRecorderOgg.js`: worker for Ogg Vorbis encoder
-* `WebAudioRecorderMp3.js`: worker for MP3 encoder
-* `WavAudioEncoder.min.js`: Waveform Audio encoder (from [WavAudioEncoder.js](https://github.com/higuma/wav-audio-encoder-js))
-* `OggVorbisEncoder.min.js`: Ogg Vorbis encoder (from [OggVorbisEncoder.js](https://github.com/higuma/ogg-vorbis-encoder-js))
-* `Mp3LameEncoder.min.js`: MP3 encoder (from [Mp3LameEncoder.js](https://github.com/higuma/mp3-lame-encoder-js))
-* `OggVorbisEncoder.min.js.mem`: memory initializer for Ogg Vorbis encoder (must be located on the same directory)
-* `Mp3LameEncoder.min.js.mem`: memory initializer for MP3 encoder (must be located on the same directory)
-
-`lib-minified/` contains minified library files.
 
 * `WebAudioRecorder.min.js`: main script (minified)
 * `WebAudioRecorderWav.min.js`: worker for Waveform Audio (concatenated with encoder and recompressed)
-* `WebAudioRecorderOgg.min.js`: worker for Ogg Vorbis (concatenated with encoder and recompressed)
 * `WebAudioRecorderMp3.min.js`: worker for MP3 (concatenated with encoder and recompressed)
-* `OggVorbisEncoder.min.js.mem`: memory initializer for Ogg Vorbis encoder (same file as above)
 * `Mp3LameEncoder.min.js.mem`: memory initializer for MP3 encoder (same file as avove)
 
 ### Using library
